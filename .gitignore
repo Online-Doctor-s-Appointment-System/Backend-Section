@@ -1,0 +1,26 @@
+# Ignore local env files
+.env
+
+# Node
+node_modules/
+
+# Logs
+logs
+.log
+
+# OS files
+.DS_Store.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+node_modules/
+.env
+.DS_Store
+.vscode/
+npm-debug.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
