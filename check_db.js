@@ -2,8 +2,10 @@ const db = require('./src/config/db');
 
 (async () => {
   try {
-    const res = await db.query("SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'users';");
-    console.log(JSON.stringify(res.rows, null, 2));
+    const res = await db.query(
+      "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE';"
+    );
+    console.log("Existing tables:", res.rows.map(r => r.table_name));
   } catch (err) {
     console.error(err);
   } finally {
